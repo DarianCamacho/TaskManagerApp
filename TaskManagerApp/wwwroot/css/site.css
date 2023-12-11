@@ -1,0 +1,39 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.display-4 {
+    font-size: 4rem;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00f;
+    animation: blink 8s infinite; /* Ciclo completo de 8 segundos (6s estático + 2s parpadeo rápido) */
+}
