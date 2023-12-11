@@ -1,3 +1,6 @@
+/* Option 2: Import via CSS */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
 html {
   font-size: 14px;
 }
@@ -36,4 +39,100 @@ body {
     color: #00ffff;
     text-shadow: 0 0 10px #00f;
     animation: blink 8s infinite; /* Ciclo completo de 8 segundos (6s estático + 2s parpadeo rápido) */
+}
+
+/*Btn Volver*/
+
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+/* button styling */
+.button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #37FF8B;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+
+/*DIVS*/
+
+.content-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+    margin: 0 auto; /* Esto centrará horizontalmente el contenido */
+    padding: 20px; /* Añade un relleno para espaciar el contenido del borde */
+}
+
+
+    /* Estilos adicionales para el formulario si es necesario */
+    .content-box form {
+        /* Tus estilos personalizados para el formulario aquí */
+    }
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.background {
+    display: inline-block; /* Hace que el div se ajuste al contenido */
+    padding: 20px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra */
+    background-color: #f5f5f5; /* Cambia el color de fondo a uno menos blanco */
+    transition: transform 0.3s; /* Transición suave */
+}
+
+.custom-div:hover {
+    transform: scale(1.1, 1); /* Aumenta ligeramente el tamaño en el hover */
+}
+
+/* Options */
+
+.container{
+    padding: 1em;
+    overflow: hidden;
+}
+
+.options{
+    float: left;
 }
